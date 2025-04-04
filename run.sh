@@ -21,6 +21,8 @@ bantime = 3600
 findtime = 600
 # Ban after 5 failed login attempts
 maxretry = 5
+# Ignore local IPs (localhost, private networks)
+ignoreip = 127.0.0.1/8 10.0.0.0/8 172.16.0.0/12 192.168.0.0/16
 
 [sshd]
 enabled = true
