@@ -3,6 +3,9 @@
 sudo apt-get update
 sudo apt-get upgrade -y
 
+# Install essential tools
+sudo apt install net-tools vim -y
+
 # SSH
 sudo apt install openssh-server -y
 sudo systemctl start ssh
@@ -68,6 +71,10 @@ sudo systemctl restart ssh
 mkdir -p ~/alias
 cp docker_aliases.sh ~/alias/
 echo 'source ~/alias/docker_aliases.sh' >> ~/.bashrc
+
+# Set up Git aliases
+cp git_aliases.sh ~/alias/
+echo 'source ~/alias/git_aliases.sh' >> ~/.bashrc
 
 # TODO:: https://gist.github.com/n1snt/454b879b8f0b7995740ae04c5fb5b7df
 # 1. Install ZSH plugins
